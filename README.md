@@ -34,15 +34,15 @@ Provides:
 
 1. Clone the repo:
 ```
-   git clone https://github.com/your-username/parakeet-transcriber.git
-   cd parakeet-transcriber
+   git clone https://github.com/your-username/parakeet-python-docker.git
+   cd parakeet-python-docker
 ```
 
 2. (Recommended) Create and activate a virtual environment:
 
 ```
-   python3 -m venv venv
-   source venv/bin/activate
+   python3 -m venv parakeet-stt
+   source parakeet-stt/bin/activate
 ```
 
 3. Install Python dependencies (including torch and numpy 1.26.4):
