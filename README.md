@@ -86,8 +86,8 @@ Provides:
      … your full transcript here …
 
      === Segment Timestamps ===
-     00:00:08 - 00:00:09 : I'm not sure they call him.
-     00:01:42 - 00:01:43 : Hey, Kelly.
+     00:00:08 - 00:00:09 : I'm not sure they called him.
+     00:01:42 - 00:01:43 : Hey, Kelly. Ready to start the meeting?
      …
      ```
    * `timestamps.json` (raw segments, with start/end in seconds)
@@ -114,7 +114,7 @@ curl -X POST "http://localhost:8000/transcribe" \
   -F "chunk_s=20.0" \
   -F "overlap_s=1.0"
 ```
->  **Note**: if testing docker container endpoint using default port 8007, make sure to specify 8007 instead of 8000
+>  **Note**: If you’re testing the Docker container endpoint on its default port (8007), be sure to use port 8007 instead of 8000 when executing this cURL command.
 
 **Parameters**
 
