@@ -12,10 +12,11 @@ Provides:
 ## 📁 Repository Structure
 ```
 ├── simple_parakeet.py         # Standalone chunked-transcription script
+├── 2086-149220-0033.wav       # Sample .wav sound file that came with offical nVidia Parakeet demo code
 ├── fastapi_transcriber.py     # FastAPI service for on-demand transcription
-├── Dockerfile                 # Containerizes the FastAPI app
-├── output.txt                 # Sample output from simple_parakeet.py
-├── timestamps.json            # Sample JSON output from simple_parakeet.py
+├── Dockerfile                 # Containerized version of the above FastAPI python script
+├── output.txt                 # Generated plain-text output file from simple_parakeet.py
+├── timestamps.json            # Generated JSON output file from simple_parakeet.py
 └── README.md                  # ← You are here
 ```
 
