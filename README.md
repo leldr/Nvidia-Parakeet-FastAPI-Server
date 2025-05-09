@@ -170,13 +170,7 @@ Once running, hit the same `/transcribe` endpoint as above on `http://localhost:
 * **Cleanup**: FastAPI version writes uploads to `/tmp` and removes them after transcription.
 * **Docker Port Exposure**: By default, the current `Dockerfile` uses port 8007 since I do regular development on ports 8000 & 8080.  
 
----
 
-## 📜 License
-
-MIT © Lauryn Eldridge
-
----
 
 ## Liability Disclaimer
 
@@ -192,3 +186,10 @@ This includes, but is not limited to:
 
 You are solely responsible for ensuring compliance with any applicable laws, regulations, and licensing requirements when using this software in your environment.
 
+---
+
+## 📜 License
+
+MIT © Lauryn Eldridge
+
+---
