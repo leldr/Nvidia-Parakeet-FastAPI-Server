@@ -156,7 +156,7 @@ docker build -t parakeet-transcriber .
 ```
 Run (exposes port 8007)
 ```bash
-sudo docker run -d --name parakeet-transcriber --gpus all   -p 8007:8007   --ipc host   parakeet-transcriber
+docker run -d --name parakeet-transcriber --gpus all   -p 8007:8007   --ipc host   parakeet-transcriber
 ```
 
 Once running, hit the same `/transcribe` endpoint as above on `http://localhost:8007`. GUI located at `http://localhost:8007/docs`.
