@@ -119,7 +119,7 @@ curl -X POST "http://localhost:8000/transcribe" \
 
 **Parameters**
 
-* `audio_file`: your audio (`.wav`, `.flac`, or `.mp3`)
+* `audio_file`: your audio (`.wav` or `.mp3`)
 * `chunk_s`: chunk length in seconds (default `20.0`)
 * `overlap_s`: overlap per chunk in seconds (default `1.0`)
 
