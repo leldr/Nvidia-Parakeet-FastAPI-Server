@@ -77,24 +77,26 @@ async def transcribe_audio(
             full_text.append(out.text)
 
             for seg in out.timestamp['segment']:
-                # Skip segments in overlap regions
+                # Skip overlapping segments
                 if seg['start'] < overlap_s and i != 0:
                     continue
                 if seg['end'] > (chunk_s + overlap_s) and i != n_chunks - 1:
                     continue
                 segments.append({
-                    'start_seconds': seg['start'] + offset,
-                    'end_seconds': seg['end'] + offset,
                     'start_ts': format_time(seg['start'] + offset),
                     'end_ts': format_time(seg['end'] + offset),
                     'text': seg['segment']
                 })
 
+        # Build timestamped transcript block
+        lines = [f"{s['start_ts']} - {s['end_ts']} {s['text']}" for s in segments]
+        timestamped_transcript = "\n".join(lines)
+
         return JSONResponse({
             'full_transcript': " ".join(full_text),
-            'segments': segments
+            'timestamped_transcript': timestamped_transcript
         })
     finally:
-        # Clean up
+        # Clean up temporary file
         if os.path.exists(temp_path):
             os.remove(temp_path)
