@@ -1,5 +1,7 @@
 # Parakeet Transcriber
 
+[Liability Disclaimer](#liability-disclaimer)
+
 A simple audio-to-text transcription toolkit powered by NVIDIA NeMo’s Parakeet 0.6B model.  
 Provides:
 
@@ -173,4 +175,20 @@ Once running, hit the same `/transcribe` endpoint as above on `http://localhost:
 ## 📜 License
 
 MIT © Lauryn Eldridge
+
+---
+
+## Liability Disclaimer
+
+The code and documentation provided in this repository are supplied “AS IS,” without warranties of any kind, express or implied. Use of all contents is at your own risk. Under no circumstances shall the authors, contributors, or maintainers be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your use of, or inability to use, this software—even if advised of the possibility of such damages.
+
+This includes, but is not limited to:
+
+* Loss of data, revenue, or profits
+* Business interruption
+* Security breaches or unauthorized access
+* Hardware or software failure
+* Any other pecuniary or non-pecuniary loss
+
+You are solely responsible for ensuring compliance with any applicable laws, regulations, and licensing requirements when using this software in your environment.
 
