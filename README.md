@@ -147,19 +147,14 @@ curl -X POST "http://localhost:8000/transcribe" \
 
 Build and run the FastAPI service in a container:
 
-```bash
-# Build
-docker build -t parakeet-transcriber .
 
-# Run (exposes port 8007)
-docker run -d \
-  --name parakeet-transcriber \
-  -p 8007:8007 \
-  --ipc host \
-  -e OMP_NUM_THREADS=$(nproc) \
-  -e MKL_NUM_THREADS=$(nproc) \
-  -e TORCH_NUM_THREADS=$(nproc) \
-  parakeet-transcriber
+Build
+```bash
+docker build -t parakeet-transcriber .
+```
+Run (exposes port 8007)
+```bash
+docker run -d --name parakeet-transcriber --gpus all   -p 8007:8007   --ipc host   -e OMP_NUM_THREADS=$(nproc)   -e MKL_NUM_THREADS=$(nproc)   -e TORCH_NUM_THREADS=$(nproc)   parakeet-transcriber
 ```
 
 Once running, hit the same `/transcribe` endpoint as above on `http://localhost:8007`.
