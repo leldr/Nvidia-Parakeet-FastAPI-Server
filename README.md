@@ -114,7 +114,7 @@ curl -X POST "http://localhost:8000/transcribe" \
   -F "chunk_s=20.0" \
   -F "overlap_s=1.0"
 ```
->  **Note**: If you’re testing the Docker container endpoint on its default port (8007), be sure to use port 8007 instead of 8000 when executing this cURL command.
+>  **Note**: This cURL command can be used to test the Docker API endpoint on its default port (8007) as well. If you are doing this, be sure to use `http://localhost:8007/transcribe` instead of `http://localhost:8000/transcribe`.
 
 **Parameters**
 
