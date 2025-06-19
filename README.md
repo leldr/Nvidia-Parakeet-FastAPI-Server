@@ -130,16 +130,7 @@ curl -X POST "http://localhost:8000/transcribe" \
 ```json
 {
   "full_transcript": "… full text …",
-  "segments": [
-    {
-      "start_seconds": 8.4,
-      "end_seconds": 9.6,
-      "start_ts": "0:00:08",
-      "end_ts": "0:00:09",
-      "text": "I'm not sure they call him."
-    },
-    …
-  ]
+  "timestamped_trasncript": "00:00:00: Lorem ipsum..."
 }
 ```
 
