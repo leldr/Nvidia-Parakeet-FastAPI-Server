@@ -15,6 +15,11 @@ from datetime import timedelta
 
 app = FastAPI(title="Parakeet Transcription API")
 
+# Health check endpoint
+@app.get("/health")
+async def health():
+    return JSONResponse(status_code=200, content={"status": "ok"})
+
 # Load the ASR model once at startup
 def load_model():
     return nemo_asr.models.ASRModel.from_pretrained(
