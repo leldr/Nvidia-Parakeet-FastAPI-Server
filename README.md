@@ -107,22 +107,21 @@ Provides:
 Make sure your `venv` is activated, then:
 
 ```bash
-python3 -m uvicorn fastapi_transcriber:app --host 0.0.0.0 --port 8000
+python3 -m uvicorn fastapi_transcriber:app --host 0.0.0.0 --port 8007
 ```
 
 ### API Usage
 
 ```bash
-curl -X POST "http://localhost:8000/transcribe" \
+curl -X POST "http://localhost:8007/transcribe" \
   -F "audio_file=@/path/to/your.wav" \
   -F "chunk_s=20.0" \
   -F "overlap_s=1.0"
 ```
->  **Note**: This cURL command can be used to test the Docker API endpoint on its default port (8007) as well. If you are doing this, be sure to use `http://localhost:8007/transcribe` instead of `http://localhost:8000/transcribe`.
 
 **Parameters**
 
-* `audio_file`: your audio (`.wav` or `.mp3`)
+* `audio_file`: your audio (`.wav` or `.mp3`) (TO-DO: Support `m4a` file upload)
 * `chunk_s`: chunk length in seconds (default `20.0`)
 * `overlap_s`: overlap per chunk in seconds (default `1.0`)
 
