@@ -26,7 +26,8 @@ Provides:
 
 ## ⚙️ Prerequisites
 
-- **Python** ≥ 3.10  
+- **Python** ≥ 3.10
+     - Understanding of creating and activating python virtual environments (venv)
 - **pip**  
 - **Git** (to clone the repo)  
 - **Docker** (optional; for containerized deployment)  
